@@ -1,6 +1,7 @@
 import { SectionContainer } from "@/components/layout/section-container";
-import { Button } from "@/components/shared/button/button";
+import { Button, buttonVariants } from "@/components/shared/button/button";
 import { ArrowLeft } from "lucide-react";
+import Link from "next/link";
 
 export default function AuthLayout({
   children,
@@ -9,10 +10,10 @@ export default function AuthLayout({
 }) {
   return (
     <SectionContainer className="mt-20">
-      <Button variant={"ghost"}>
+      <Link href="/" className={buttonVariants({ variant: "ghost" })}>
         <ArrowLeft />
         Back to home page
-      </Button>
+      </Link>
       {children}
     </SectionContainer>
   );

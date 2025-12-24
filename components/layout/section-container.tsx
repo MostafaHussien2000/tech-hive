@@ -6,7 +6,9 @@ export function SectionContainer({
   className?: string;
 }) {
   return (
-    <div className={`w-full container mx-auto max-w-7xl ${className ?? ""}`}>
+    <div
+      className={`w-full container mx-auto max-w-7xl px-4 ${className ?? ""}`}
+    >
       {children}
     </div>
   );
